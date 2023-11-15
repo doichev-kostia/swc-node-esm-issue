@@ -1,0 +1,19 @@
+{
+  "name": "swc-node-esm-issue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src.main.ts",
+  "type": "module",
+  "scripts": {
+    "broken": "node --loader @swc-node/register/esm ./src/main.ts",
+    "fixed": "node --import ./register.js ./src/main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@swc-node/register": "^1.6.8",
+    "@types/node": "^20.9.0",
+    "typescript": "^5.2.2"
+  }
+}
